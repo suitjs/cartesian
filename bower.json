@@ -1,0 +1,37 @@
+{
+  "name": "suitjs/cartesian",
+  "homepage": "https://github.com/suitjs/cartesian",
+  "authors": [
+    "Eduardo Dias da Costa <eduardo@thelaborat.org>",
+	"Gustavo Allebrandt <gustavoallebrandt@gmail.com>",
+  ],
+  "description": "Think vertical and horizontal",
+  "main": ["css/cartesian.css"],
+  "moduleType": [],
+  "keywords": [
+	"front-end",
+    "sass",
+	"scss",		
+    "style",
+	"flexbox",
+	"layout",
+  ],
+  
+  "ignore": [	
+	"**/.*",
+	"old/",
+	"node_modules/",
+	"bower_components/",
+	"source/",	
+	"tools/",
+	"*.hxproj",
+	"test.html",	
+	"README.md",
+	"bower.json",
+	"haxelib.json",
+	"LICENSE"	
+  ],
+
+  "license": "MIT",
+  "private": true
+}

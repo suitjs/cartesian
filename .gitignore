@@ -1,0 +1,8 @@
+node_modules
+npm-debug.log
+*.bat
+*.html
+lapel-haxe.js
+Main.hx
+tools/
+old/

@@ -1,0 +1,68 @@
+@import "mixins";
+
+/*Horizontal Layout*/
+h, .h {	
+	@include flexbox();	
+	@include flex-direction(row);
+	@include flex-shrink(0);
+	@include flex-grow(0);
+	@include align-content(flex-start);		
+}
+
+/*Vertical Layout*/
+v, .v {	
+	@include flexbox();	
+	@include flex-direction(column);
+	@include flex-shrink(0);	
+	@include flex-grow(0);
+	@include align-content(flex-start);			
+}
+
+
+hx, .hx {
+	@include flexbox();	
+	@include flex-direction(row);		
+	@include align-content(flex-start);	
+	@include flex-grow(1); 
+	@include flex-shrink(1);
+	width: inherit;		
+}
+
+vx, .vx {
+	@include flexbox();	
+	@include flex-direction(column);
+	@include flex-shrink(1);	
+	@include flex-grow(1);
+	@include align-content(flex-start);			
+	height: inherit;	
+}
+
+/*Make the cartesian container's first horizontal or vertical child to fill all area*/
+cartesian, .cartesian {	
+	& > {
+		vx, hx, .vx, .hx {				
+				width: 100%;
+				height: 100%;		
+		}	
+	}
+}
+
+
+
+/*Flex Grow Iterations*/
+@for $i from 1 through 10 { .fg#{$i} { @include flex-grow($i); } }
+
+/*Layout Position*/
+.ltl  { @include align-items(flex-start); 	@include justify-content(flex-start); }  //Top Left
+.ltc  { @include align-items(flex-start); 	@include justify-content(center); }		 //Top Center
+.ltr  { @include align-items(flex-start); 	@include justify-content(flex-end); }    //Top Right
+.ll   { @include align-items(center); 		@include justify-content(flex-start); }  //Left
+.lc   { @include align-items(center); 		@include justify-content(center); }		 //Center
+.lr   { @include align-items(center); 		@include justify-content(flex-end); }	 //Right
+.lbl  { @include align-items(flex-end); 	@include justify-content(flex-start); }  //Bottom Left
+.lbc  { @include align-items(flex-end); 	@include justify-content(center); }		 //Bottom Center
+.lbr  { @include align-items(flex-end); 	@include justify-content(flex-end); }	 //Bottom Right
+
+.l-wrap   { @include flex-wrap(wrap); }			//Layout Wrap
+.l-rwrap  { @include flex-wrap(wrap-reverse); } //Layout Reverse Wrap
+.l-nowrap { @include flex-wrap(nowrap); }		//Layout No Wrap

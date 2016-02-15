@@ -1,0 +1,7 @@
+.cartesian-debug .h, .cartesian-debug h, .cartesian-debug .hx, .cartesian-debug hx {
+  background: linear-gradient(rgba(255, 128, 128, 0.15), rgba(255, 128, 128, 0));
+  outline: solid 1px #c00; }
+
+.cartesian-debug .v, .cartesian-debug v, .cartesian-debug .vx, .cartesian-debug vx {
+  background: rgba(128, 255, 128, 0.15), rgba(128, 255, 128, 0);
+  outline: solid 1px #0c0; }
